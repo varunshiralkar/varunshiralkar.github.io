@@ -7,12 +7,12 @@ export default function GrapheneMark({ className }: GrapheneMarkProps) {
   return (
     <svg
       className={className}
-      viewBox="3 5.5 18 16"
-      width="18"
-      height="18"
+      viewBox="4 6 15 15"
+      width="16"
+      height="16"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.5"
+      strokeWidth="1.35"
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"

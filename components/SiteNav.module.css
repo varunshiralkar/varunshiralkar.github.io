@@ -12,38 +12,39 @@
   margin: 0 auto;
   padding: var(--space-2) var(--space-3);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: var(--space-3);
-  min-height: 24px;
+  flex-wrap: wrap;
 }
 
 .mark {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-end;
   gap: var(--space-1);
-  height: 24px;
   font-family: var(--font-heading);
   font-size: 18px;
-  line-height: 24px;
+  line-height: 1;
   font-weight: 500;
   color: var(--color-text);
   transition: color var(--transition);
 }
 
 .mark span {
-  display: inline-flex;
-  align-items: center;
-  line-height: 24px;
+  display: block;
+  line-height: 1;
 }
 
 .markIcon {
   display: block;
   flex-shrink: 0;
-  width: 18px;
-  height: 18px;
+  width: 15px;
+  height: 15px;
+  overflow: hidden;
+  /* Offset empty descender space in the serif em-box so the hex sits on the letter baseline */
+  transform: translateY(-0.14em);
   color: var(--color-highlight);
-  transition: color var(--transition);
+  transition: color var(--transition), transform var(--transition);
 }
 
 .mark:hover {
@@ -56,42 +57,46 @@
 
 .list {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: var(--space-3);
   list-style: none;
-  height: 24px;
+  margin: 0;
+  padding: 0;
 }
 
 .link,
 .linkActive {
-  display: inline-flex;
-  align-items: center;
-  height: 24px;
-  font-size: 16px;
-  line-height: 24px;
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 18px;
+  line-height: 1;
   font-weight: 500;
   color: var(--color-text-muted);
-  box-shadow: inset 0 -1px 0 transparent;
-  transition: color var(--transition), box-shadow var(--transition);
+  text-decoration: none;
+  padding-bottom: 0;
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 0;
+  transition: color var(--transition), background-size var(--transition);
 }
 
 .link:hover {
   color: var(--color-highlight);
-  box-shadow: inset 0 -1px 0 var(--color-highlight);
+  background-size: 100% 1px;
 }
 
 .linkActive {
   color: var(--color-accent);
-  box-shadow: inset 0 -1px 0 var(--color-accent);
+  background-size: 100% 1px;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 400px) {
   .nav {
     padding: var(--space-2);
     flex-direction: column;
     align-items: flex-start;
     gap: var(--space-2);
-    min-height: 0;
   }
 
   .list {
