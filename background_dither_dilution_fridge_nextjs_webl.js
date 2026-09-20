@@ -17,7 +17,7 @@ const CONFIG = {
   ditherStyle: 0,   
   ditherSize: 2.0,
   ditherOpacity: 1,
-  speed: 0.4.0,
+  speed: 0.4,
   colors: ['#2d3436', '#6c5b4a', '#b8860b', '#daa520'],
   imageOpacity: 0.8,
   imageScale: 1
