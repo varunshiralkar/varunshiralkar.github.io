@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import GrapheneMark from "@/components/GrapheneMark";
 import styles from "./SiteNav.module.css";
 
 const links = [
@@ -17,7 +18,8 @@ export default function SiteNav() {
     <header className={styles.header}>
       <nav className={styles.nav} aria-label="Primary">
         <Link href="/" className={styles.mark}>
-          Varun Shiralkar
+          <GrapheneMark className={styles.markIcon} />
+          <span>Varun Shiralkar</span>
         </Link>
         <ul className={styles.list}>
           {links.map(({ href, label }) => {

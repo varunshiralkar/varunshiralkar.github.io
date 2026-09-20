@@ -18,6 +18,9 @@
 }
 
 .mark {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
   font-family: var(--font-heading);
   font-size: 18px;
   line-height: 28px;
@@ -26,8 +29,18 @@
   transition: color var(--transition);
 }
 
+.markIcon {
+  flex-shrink: 0;
+  color: var(--color-highlight);
+  transition: color var(--transition);
+}
+
 .mark:hover {
   color: var(--color-highlight);
+}
+
+.mark:hover .markIcon {
+  color: var(--color-accent);
 }
 
 .list {
