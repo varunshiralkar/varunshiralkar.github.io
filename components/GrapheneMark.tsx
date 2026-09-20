@@ -7,9 +7,9 @@ export default function GrapheneMark({ className }: GrapheneMarkProps) {
   return (
     <svg
       className={className}
-      viewBox="0 0 24 24"
-      width="20"
-      height="20"
+      viewBox="3 5.5 18 16"
+      width="18"
+      height="18"
       fill="none"
       stroke="currentColor"
       strokeWidth="1.5"
