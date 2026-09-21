@@ -7,7 +7,7 @@ export default function HomePage() {
     <DitherHero>
       <h1 className={styles.brand}>Varun Shiralkar</h1>
       <p className={styles.tagline}>
-        Notes, experiments, and writing — kept minimal on purpose.
+        Croissant for your thoughts?
       </p>
       <Link href="/blog" className={styles.cta}>
         Read the blog

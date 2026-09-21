@@ -29,7 +29,7 @@ export default function AboutPage() {
         </div>
         <p className={styles.links}>
           <a
-            href="https://github.com/varunshiralkar"
+            href="https://github.com/OrangeAFK"
             rel="noopener noreferrer"
             target="_blank"
           >
